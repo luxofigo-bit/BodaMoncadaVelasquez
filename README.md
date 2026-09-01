@@ -10,22 +10,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#647B84;
     --paper:#F1EDE5;
     --paper-2:#E9E3D8;
-    --smoke:#C9D5DA;
+    --smoke:#55697A;
     --smoke-deep:#2C3A45;
     --smoke-light:#AFC0CB;
-    --brass:#E8C989;
-    --line: rgba(241,237,229,0.30);
-    --line-soft: rgba(241,237,229,0.14);
+    --brass:#B3925F;
+    --line: rgba(44,58,69,0.32);
+    --line-soft: rgba(44,58,69,0.16);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--bg);
-    color:var(--paper);
+    background:var(--paper);
+    color:var(--smoke-deep);
     font-family:'Inter',sans-serif;
     font-weight:300;
     -webkit-font-smoothing:antialiased;
@@ -45,7 +44,7 @@
     background:
       linear-gradient(var(--line-soft) 1px, transparent 1px) 0 0/100% 28px,
       linear-gradient(90deg, var(--line-soft) 1px, transparent 1px) 0 0/28px 100%,
-      var(--bg);
+      var(--paper);
   }
   .crop{
     position:absolute;
@@ -53,7 +52,7 @@
     height:22px;
     opacity:0.55;
   }
-  .crop::before,.crop::after{content:"";position:absolute;background:var(--paper);}
+  .crop::before,.crop::after{content:"";position:absolute;background:var(--smoke-deep);}
   .crop::before{width:100%;height:1px;top:50%;}
   .crop::after{height:100%;width:1px;left:50%;}
   .crop.tl{top:22px;left:22px;}
@@ -91,7 +90,7 @@
     font-size:clamp(48px,10vw,84px);
     line-height:1;
     margin:0 0 22px;
-    color:var(--paper);
+    color:var(--smoke-deep);
   }
   .names .amp{
     font-style:italic;
@@ -109,13 +108,23 @@
     margin:0 auto;
     line-height:1.8;
   }
+  .invite-highlight{
+    display:inline-block;
+    margin-top:8px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:26px;
+    letter-spacing:0.02em;
+    color:var(--brass);
+  }
 
   /* PULSE DIMENSION DIVIDER */
   .pulse-wrap{
     max-width:760px;
     margin:0 auto;
     padding:0 40px;
-    background:var(--bg);
+    background:var(--paper);
   }
   .pulse-wrap svg{display:block;width:100%;height:auto;}
 
@@ -163,7 +172,7 @@
     font-style:italic;
     font-weight:400;
     font-size:28px;
-    color:var(--paper);
+    color:var(--smoke-deep);
     text-align:center;
     margin:0 0 8px;
   }
@@ -201,7 +210,7 @@
     font-weight:500;
     font-size:16.5px;
     line-height:1.6;
-    color:var(--paper);
+    color:var(--smoke-deep);
   }
 
   /* SITE PLAN / VENUE CARDS */
@@ -223,7 +232,7 @@
     font-weight:600;
     font-size:24px;
     margin:0 0 6px;
-    color:var(--paper);
+    color:var(--smoke-deep);
   }
   .venue-loc{
     font-family:'Inter',sans-serif;
@@ -235,7 +244,7 @@
   .venue-time{
     font-family:'Space Mono',monospace;
     font-size:11.5px;
-    color:var(--paper);
+    color:var(--smoke-deep);
     border-top:1px dashed var(--line);
     padding-top:14px;
     margin-bottom:22px;
@@ -249,13 +258,13 @@
     font-family:'Space Mono',monospace;
     font-size:11.5px;
     letter-spacing:0.06em;
-    color:var(--smoke-deep);
-    background:var(--brass);
+    color:var(--paper);
+    background:var(--smoke-deep);
     text-decoration:none;
     padding:12px 20px;
     transition:background 0.25s ease;
   }
-  .map-btn:hover{background:var(--paper);}
+  .map-btn:hover{background:var(--smoke);}
   .map-btn svg{width:14px;height:14px;flex-shrink:0;}
 
   .dress{
@@ -276,7 +285,7 @@
   .itin-time{
     font-family:'Space Mono',monospace;
     font-size:12.5px;
-    color:var(--paper);
+    color:var(--smoke-deep);
   }
   .itin-node{position:relative;height:100%;display:flex;align-items:center;justify-content:center;}
   .itin-node::after{
@@ -308,7 +317,7 @@
     font-family:'Fraunces',serif;
     font-weight:500;
     font-size:15px;
-    color:var(--paper);
+    color:var(--smoke-deep);
     padding-left:4px;
   }
 
@@ -326,9 +335,35 @@
     font-style:italic;
     font-size:16.5px;
     line-height:1.6;
-    color:var(--paper);
+    color:var(--smoke-deep);
     max-width:420px;
     margin:0 auto;
+  }
+
+  /* SCRIPTURE */
+  .scripture{
+    text-align:center;
+    max-width:460px;
+    margin:44px auto 54px;
+    padding:32px 14px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .scripture-text{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:16px;
+    line-height:1.9;
+    color:var(--smoke-deep);
+    margin:0;
+  }
+  .scripture-ref{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    color:var(--brass);
+    margin:18px 0 0;
   }
 
   .coord{
@@ -347,7 +382,7 @@
     font-family:'Fraunces',serif;
     font-style:italic;
     font-size:20px;
-    color:var(--paper);
+    color:var(--smoke-deep);
     margin-bottom:6px;
   }
   .footer-tag{
@@ -380,25 +415,25 @@
   <div class="sheet-id"><span>PLANO N.º 001 — UNIÓN</span><span>ESC. 1:1</span></div>
 
   <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="46" stroke="#F1EDE5" stroke-width="1"/>
-    <path d="M50 6 L50 18 M50 84 L50 94 M6 50 L18 50 M82 50 L94 50" stroke="#F1EDE5" stroke-width="1"/>
-    <path d="M33 43 Q33 30 50 30 Q67 30 67 43 L67 47 Q50 52 33 47 Z" stroke="#F1EDE5" stroke-width="1.3" stroke-linejoin="round"/>
-    <line x1="36" y1="40" x2="64" y2="40" stroke="#F1EDE5" stroke-width="0.9"/>
-    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#E8C989" stroke-width="2" stroke-linecap="round"/>
-    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#E8C989" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="50" cy="50" r="46" stroke="#55697A" stroke-width="1"/>
+    <path d="M50 6 L50 18 M50 84 L50 94 M6 50 L18 50 M82 50 L94 50" stroke="#55697A" stroke-width="1"/>
+    <path d="M33 43 Q33 30 50 30 Q67 30 67 43 L67 47 Q50 52 33 47 Z" stroke="#55697A" stroke-width="1.3" stroke-linejoin="round"/>
+    <line x1="36" y1="40" x2="64" y2="40" stroke="#55697A" stroke-width="0.9"/>
+    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#B3925F" stroke-width="2" stroke-linecap="round"/>
+    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#B3925F" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 
   <p class="eyebrow-word">Nos casamos</p>
   <h1 class="names">LUIS <span class="amp">&amp;</span> BESSI</h1>
-  <p class="invite-line">ESTAMOS FELICES DE INVITARTE A NUESTRA BODA,<br>A CONSTRUIR JUNTOS NUESTRO MATRIMONIO.</p>
+  <p class="invite-line">TE INVITAMOS A ESTE GRAN DÍA,<br><span class="invite-highlight">NUESTRA BODA</span></p>
 </section>
 
 <div class="pulse-wrap">
   <svg viewBox="0 0 720 44" preserveAspectRatio="none">
-    <line x1="0" y1="22" x2="720" y2="22" stroke="#F1EDE5" stroke-opacity="0.25" stroke-width="1"/>
-    <path d="M0 22 L280 22 L296 6 L312 38 L328 14 L344 22 L720 22" stroke="#F1EDE5" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="0" y1="14" x2="0" y2="30" stroke="#F1EDE5" stroke-opacity="0.4" stroke-width="1"/>
-    <line x1="720" y1="14" x2="720" y2="30" stroke="#F1EDE5" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="0" y1="22" x2="720" y2="22" stroke="#2C3A45" stroke-opacity="0.25" stroke-width="1"/>
+    <path d="M0 22 L280 22 L296 6 L312 38 L328 14 L344 22 L720 22" stroke="#55697A" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="0" y1="14" x2="0" y2="30" stroke="#2C3A45" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="720" y1="14" x2="720" y2="30" stroke="#2C3A45" stroke-opacity="0.4" stroke-width="1"/>
   </svg>
 </div>
 
@@ -412,8 +447,24 @@
   </div>
   <p class="frame-cap">LUIS &amp; BESSI — REGISTRO FOTOGRÁFICO 01</p>
 
+  <div class="scripture">
+    <p class="scripture-text">"Más valen dos que uno,<br>
+    porque obtienen más fruto de su trabajo.<br>
+    Si caen, el uno levanta al otro;<br>
+    pero, ¡ay del solo que cae<br>
+    y no tiene quien lo levante!<br><br>
+    Además, cuando dos se acuestan juntos,<br>
+    se calientan mutuamente;<br>
+    en cambio uno solo, ¿cómo entrará en calor?<br>
+    Y si alguien puede vencer al que está solo,<br>
+    dos podrán resistir juntos.<br>
+    Y la cuerda de tres hilos<br>
+    no se rompe fácilmente."</p>
+    <p class="scripture-ref">ECLESIASTÉS 4, 9-12</p>
+  </div>
+
   <p class="section-title">Con la bendición de</p>
-  <p class="section-sub">NUESTROS PADRES</p>
+  <p class="section-sub">DIOS Y NUESTROS PADRES</p>
 
   <div class="legend">
     <div>
@@ -438,7 +489,7 @@
   <div class="venue">
     <p class="venue-label">01 — CEREMONIA RELIGIOSA</p>
     <p class="venue-name" style="font-size:20px;line-height:1.3;">Capilla Sagrado Corazón de Jesús<br><span style="font-size:14px;font-family:'Space Mono',monospace;letter-spacing:0.04em;color:var(--smoke);">UNICAH</span></p>
-    <p class="venue-loc">Aldea las Casitas,Tegucigalpa, Honduras</p>
+    <p class="venue-loc">Aldea las Casitas, Tegucigalpa, Honduras</p>
     <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>3:30 P.M.</span></div>
     <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=UNICAH+Tegucigalpa+Honduras" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
@@ -449,8 +500,8 @@
 
   <div class="venue">
     <p class="venue-label">02 — RECEPCIÓN</p>
-    <p class="venue-name"> Villa Betel</p>
-    <p class="venue-loc">Carretera a Mateo, Tegucigalpa, Honduras</p>
+    <p class="venue-name">Villa Betel</p>
+    <p class="venue-loc">Carretera a Matero, Tegucigalpa, Honduras</p>
     <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>6:30 P.M.</span></div>
     <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Villa+Betel+Tegucigalpa+Honduras" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
@@ -468,10 +519,10 @@
 
 <div class="pulse-wrap">
   <svg viewBox="0 0 720 44" preserveAspectRatio="none">
-    <line x1="0" y1="22" x2="720" y2="22" stroke="#F1EDE5" stroke-opacity="0.25" stroke-width="1"/>
-    <path d="M0 22 L380 22 L396 6 L412 38 L428 14 L444 22 L720 22" stroke="#F1EDE5" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="0" y1="14" x2="0" y2="30" stroke="#F1EDE5" stroke-opacity="0.4" stroke-width="1"/>
-    <line x1="720" y1="14" x2="720" y2="30" stroke="#F1EDE5" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="0" y1="22" x2="720" y2="22" stroke="#2C3A45" stroke-opacity="0.25" stroke-width="1"/>
+    <path d="M0 22 L380 22 L396 6 L412 38 L428 14 L444 22 L720 22" stroke="#55697A" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="0" y1="14" x2="0" y2="30" stroke="#2C3A45" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="720" y1="14" x2="720" y2="30" stroke="#2C3A45" stroke-opacity="0.4" stroke-width="1"/>
   </svg>
 </div>
 
@@ -499,10 +550,10 @@
 
 <div class="pulse-wrap">
   <svg viewBox="0 0 720 44" preserveAspectRatio="none">
-    <line x1="0" y1="22" x2="720" y2="22" stroke="#F1EDE5" stroke-opacity="0.25" stroke-width="1"/>
-    <path d="M0 22 L480 22 L496 6 L512 38 L528 14 L544 22 L720 22" stroke="#F1EDE5" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="0" y1="14" x2="0" y2="30" stroke="#F1EDE5" stroke-opacity="0.4" stroke-width="1"/>
-    <line x1="720" y1="14" x2="720" y2="30" stroke="#F1EDE5" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="0" y1="22" x2="720" y2="22" stroke="#2C3A45" stroke-opacity="0.25" stroke-width="1"/>
+    <path d="M0 22 L480 22 L496 6 L512 38 L528 14 L544 22 L720 22" stroke="#55697A" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="0" y1="14" x2="0" y2="30" stroke="#2C3A45" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="720" y1="14" x2="720" y2="30" stroke="#2C3A45" stroke-opacity="0.4" stroke-width="1"/>
   </svg>
 </div>
 
@@ -529,17 +580,27 @@
 <section class="sheet dense-grid footer-sheet">
   <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
   <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:26px;">
-    <circle cx="50" cy="50" r="46" stroke="#F1EDE5" stroke-width="1"/>
-    <path d="M50 6 L50 18 M50 84 L50 94 M6 50 L18 50 M82 50 L94 50" stroke="#F1EDE5" stroke-width="1"/>
-    <path d="M33 43 Q33 30 50 30 Q67 30 67 43 L67 47 Q50 52 33 47 Z" stroke="#F1EDE5" stroke-width="1.3" stroke-linejoin="round"/>
-    <line x1="36" y1="40" x2="64" y2="40" stroke="#F1EDE5" stroke-width="0.9"/>
-    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#E8C989" stroke-width="2" stroke-linecap="round"/>
-    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#E8C989" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="50" cy="50" r="46" stroke="#55697A" stroke-width="1"/>
+    <path d="M50 6 L50 18 M50 84 L50 94 M6 50 L18 50 M82 50 L94 50" stroke="#55697A" stroke-width="1"/>
+    <path d="M33 43 Q33 30 50 30 Q67 30 67 43 L67 47 Q50 52 33 47 Z" stroke="#55697A" stroke-width="1.3" stroke-linejoin="round"/>
+    <line x1="36" y1="40" x2="64" y2="40" stroke="#55697A" stroke-width="0.9"/>
+    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#B3925F" stroke-width="2" stroke-linecap="round"/>
+    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#B3925F" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
+
+  <div class="venue" style="text-align:center;">
+    <p class="venue-label">CONFIRMACIÓN DE ASISTENCIA</p>
+    <p class="section-title" style="font-size:22px;margin-bottom:14px;">Confírmanos tu lugar</p>
+    <a class="map-btn" href="https://docs.google.com/spreadsheets/d/1s9JN9Rx0IHYwTjFKxysZYrwnLJKI7wHlkN_agirsZ-A/edit?usp=sharing" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="1.5"/></svg>
+      CONFIRMAR ASISTENCIA
+    </a>
+  </div>
+
   <div class="gift-note">
     <svg class="gift-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 32 C10 25 5 19 5 13.5 A7.5 7.5 0 0 1 20 11 A7.5 7.5 0 0 1 35 13.5 C35 19 30 25 20 32Z" stroke="#F1EDE5" stroke-width="1.3"/>
-      <path d="M11 18 L16 18 L18.5 13 L21.5 23 L24 18 L29 18" stroke="#E8C989" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M20 32 C10 25 5 19 5 13.5 A7.5 7.5 0 0 1 20 11 A7.5 7.5 0 0 1 35 13.5 C35 19 30 25 20 32Z" stroke="#55697A" stroke-width="1.3"/>
+      <path d="M11 18 L16 18 L18.5 13 L21.5 23 L24 18 L29 18" stroke="#B3925F" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <p class="gift-text">Tu presencia es nuestro mejor regalo, pero si deseas hacernos un obsequio en efectivo será bienvenido.</p>
   </div>
