@@ -49,7 +49,7 @@
   .crop{
     position:absolute;
     width:22px;
-    height:22px;
+    height:26px;
     opacity:0.55;
   }
   .crop::before,.crop::after{content:"";position:absolute;background:var(--smoke-deep);}
