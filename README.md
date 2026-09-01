@@ -463,8 +463,8 @@
     <p class="scripture-ref">ECLESIASTÉS 4, 9-12</p>
   </div>
 
-  <p class="section-title">Con la bendición de</p>
-  <p class="section-sub">DIOS Y NUESTROS PADRES</p>
+  <p class="section-title">Con la bendición de DIOS</p>
+  <p class="section-sub">Y NUESTROS PADRES</p>
 
   <div class="legend">
     <div>
@@ -490,7 +490,7 @@
     <p class="venue-label">01 — CEREMONIA RELIGIOSA</p>
     <p class="venue-name" style="font-size:20px;line-height:1.3;">Capilla Sagrado Corazón de Jesús<br><span style="font-size:14px;font-family:'Space Mono',monospace;letter-spacing:0.04em;color:var(--smoke);">UNICAH</span></p>
     <p class="venue-loc">Aldea las Casitas, Tegucigalpa, Honduras</p>
-    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>3:30 P.M.</span></div>
+    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>Hora 3:30 P.M.</span></div>
     <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=UNICAH+Tegucigalpa+Honduras" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
       VER UBICACIÓN
@@ -501,8 +501,8 @@
   <div class="venue">
     <p class="venue-label">02 — RECEPCIÓN</p>
     <p class="venue-name">Villa Betel</p>
-    <p class="venue-loc">Carretera a Matero, Tegucigalpa, Honduras</p>
-    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>6:30 P.M.</span></div>
+    <p class="venue-loc">Carretera a Mateo, Tegucigalpa, Honduras</p>
+    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>Hora 6:30 P.M.</span></div>
     <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Villa+Betel+Tegucigalpa+Honduras" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
       VER UBICACIÓN
@@ -512,8 +512,8 @@
 
   <div class="dress">
     <p class="venue-label" style="margin-bottom:4px;">CÓDIGO DE VESTIMENTA</p>
-    <p class="section-title" style="font-size:22px;margin-bottom:8px;">Vestimenta elegante</p>
-    <p class="venue-loc" style="margin-bottom:0;">Evita el color blanco, por favor — es nuestro día.</p>
+    <p class="section-title" style="font-size:22px;margin-bottom:8px;">Vestimenta Elegante</p>
+    <p class="venue-loc" style="margin-bottom:0;">Evita el color blanco</p>
   </div>
 </section>
 
@@ -566,13 +566,13 @@
   <p class="section-sub">EL RECORRIDO DE LA NOCHE</p>
 
   <div class="itin-list">
-    <div class="itin-row"><div class="itin-time">3:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Boda eclesiástica</div></div>
-    <div class="itin-row"><div class="itin-time">6:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Bienvenida y baile</div></div>
+    <div class="itin-row"><div class="itin-time">3:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Boda Eclesiástica</div></div>
+    <div class="itin-row"><div class="itin-time">6:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Bienvenida y Baile</div></div>
     <div class="itin-row"><div class="itin-time">7:00 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Recepción</div></div>
-    <div class="itin-row"><div class="itin-time">7:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Plato principal</div></div>
-    <div class="itin-row"><div class="itin-time">8:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Brindis y pastel</div></div>
-    <div class="itin-row"><div class="itin-time">9:00 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Fiesta bailable</div></div>
-    <div class="itin-row"><div class="itin-time">12:00 AM</div><div class="itin-node"><span></span></div><div class="itin-event">Fin de la ceremonia</div></div>
+    <div class="itin-row"><div class="itin-time">7:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Plato Principal</div></div>
+    <div class="itin-row"><div class="itin-time">8:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Brindis y Pastel</div></div>
+    <div class="itin-row"><div class="itin-time">9:00 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Fiesta Bailable</div></div>
+    <div class="itin-row"><div class="itin-time">12:00 AM</div><div class="itin-node"><span></span></div><div class="itin-event">Fin de la Ceremonia</div></div>
   </div>
 </section>
 
