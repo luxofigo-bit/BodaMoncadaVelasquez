@@ -1,4 +1,4 @@
-# Boda
+# BodaMoncadaVelasquez
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -438,7 +438,7 @@
   <div class="venue">
     <p class="venue-label">01 — CEREMONIA RELIGIOSA</p>
     <p class="venue-name" style="font-size:20px;line-height:1.3;">Capilla Sagrado Corazón de Jesús<br><span style="font-size:14px;font-family:'Space Mono',monospace;letter-spacing:0.04em;color:var(--smoke);">UNICAH</span></p>
-    <p class="venue-loc">Tegucigalpa, Honduras</p>
+    <p class="venue-loc">Aldea las Casitas Tegucigalpa, Honduras</p>
     <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>3:30 P.M.</span></div>
     <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=UNICAH+Tegucigalpa+Honduras" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
