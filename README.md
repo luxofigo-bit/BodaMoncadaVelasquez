@@ -119,6 +119,91 @@
     color:var(--brass);
   }
 
+  /* COUNTDOWN */
+  .countdown{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin:40px auto 0;
+  }
+  .cd-box{
+    width:64px;
+    padding:14px 0 10px;
+    border:1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .cd-num{
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    font-size:24px;
+    color:var(--smoke-deep);
+    line-height:1;
+  }
+  .cd-label{
+    font-family:'Space Mono',monospace;
+    font-size:9px;
+    letter-spacing:0.1em;
+    color:var(--brass);
+    margin-top:8px;
+  }
+  .cd-caption{
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    letter-spacing:0.14em;
+    color:var(--smoke);
+    margin:16px 0 0;
+  }
+
+  /* MUSIC TOGGLE */
+  .music-toggle{
+    position:fixed;
+    top:18px;
+    right:18px;
+    z-index:50;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 2px 10px rgba(44,58,69,0.18);
+  }
+  .music-toggle svg{width:18px;height:18px;color:var(--smoke-deep);}
+  .music-panel{
+    position:fixed;
+    top:68px;
+    right:18px;
+    z-index:50;
+    width:280px;
+    max-width:70vw;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:10px;
+    box-shadow:0 4px 16px rgba(44,58,69,0.2);
+    display:none;
+  }
+  .music-panel.open{display:block;}
+  .music-panel p{
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    letter-spacing:0.06em;
+    color:var(--smoke);
+    margin:0 0 8px;
+    text-align:center;
+  }
+  .music-panel iframe{width:100%;border:0;border-radius:4px;}
+
+  @media (max-width:600px){
+    .cd-box{width:52px;padding:10px 0 8px;}
+    .cd-num{font-size:19px;}
+  }
+
   /* PULSE DIMENSION DIVIDER */
   .pulse-wrap{
     max-width:760px;
@@ -426,6 +511,14 @@
   <p class="eyebrow-word">Nos casamos</p>
   <h1 class="names">LUIS <span class="amp">&amp;</span> BESSI</h1>
   <p class="invite-line">TE INVITAMOS A ESTE GRAN DÍA,<br><span class="invite-highlight">NUESTRA BODA</span></p>
+
+  <div class="countdown" id="countdown">
+    <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Días</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Horas</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Min</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Seg</span></div>
+  </div>
+  <p class="cd-caption">FALTA PARA EL 12 DE DICIEMBRE, 2026</p>
 </section>
 
 <div class="pulse-wrap">
@@ -489,8 +582,8 @@
   <div class="venue">
     <p class="venue-label">01 — CEREMONIA RELIGIOSA</p>
     <p class="venue-name" style="font-size:20px;line-height:1.3;">Capilla Sagrado Corazón de Jesús<br><span style="font-size:14px;font-family:'Space Mono',monospace;letter-spacing:0.04em;color:var(--smoke);">UNICAH</span></p>
-    <p class="venue-loc">Aldea las Casitas, Tegucigalpa, Honduras</p>
-    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>Hora 3:30 P.M.</span></div>
+    <p class="venue-loc">Tegucigalpa, Honduras</p>
+    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>3:30 P.M.</span></div>
     <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=UNICAH+Tegucigalpa+Honduras" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
       VER UBICACIÓN
@@ -512,7 +605,7 @@
 
   <div class="dress">
     <p class="venue-label" style="margin-bottom:4px;">CÓDIGO DE VESTIMENTA</p>
-    <p class="section-title" style="font-size:22px;margin-bottom:8px;">Vestimenta Elegante</p>
+    <p class="section-title" style="font-size:22px;margin-bottom:10px;">Vestimenta Elegante</p>
     <p class="venue-loc" style="margin-bottom:0;">Evita el color blanco</p>
   </div>
 </section>
@@ -569,10 +662,10 @@
     <div class="itin-row"><div class="itin-time">3:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Boda Eclesiástica</div></div>
     <div class="itin-row"><div class="itin-time">6:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Bienvenida y Baile</div></div>
     <div class="itin-row"><div class="itin-time">7:00 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Recepción</div></div>
-    <div class="itin-row"><div class="itin-time">7:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Plato Principal</div></div>
-    <div class="itin-row"><div class="itin-time">8:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Brindis y Pastel</div></div>
-    <div class="itin-row"><div class="itin-time">9:00 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Fiesta Bailable</div></div>
-    <div class="itin-row"><div class="itin-time">12:00 AM</div><div class="itin-node"><span></span></div><div class="itin-event">Fin de la Ceremonia</div></div>
+    <div class="itin-row"><div class="itin-time">7:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Plato principal</div></div>
+    <div class="itin-row"><div class="itin-time">8:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Brindis y pastel</div></div>
+    <div class="itin-row"><div class="itin-time">9:00 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Fiesta bailable</div></div>
+    <div class="itin-row"><div class="itin-time">12:00 AM</div><div class="itin-node"><span></span></div><div class="itin-event">Fin de la ceremonia</div></div>
   </div>
 </section>
 
@@ -609,6 +702,47 @@
   <p class="footer-tag">LUIS &amp; BESSI · #LUISYBESSI</p>
   <p class="footer-note">PLANO ELABORADO CON CARIÑO PARA NUESTROS INVITADOS<br>DOC. CONFIDENCIAL DE FAMILIA — NO REDISTRIBUIR</p>
 </section>
+
+<div class="music-toggle" id="musicToggle" title="Música">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+</div>
+<div class="music-panel" id="musicPanel">
+  <p>HERMOSA EN BLANCO — SHANE FILAN</p>
+  <iframe id="spotifyFrame" src="" height="80" allow="encrypted-media" loading="lazy"></iframe>
+</div>
+
+<script>
+  // Countdown al 12 de diciembre de 2026, 3:30 p.m.
+  var weddingDate = new Date("2026-12-12T15:30:00-06:00").getTime();
+  function updateCountdown(){
+    var now = new Date().getTime();
+    var diff = weddingDate - now;
+    if(diff < 0){ diff = 0; }
+    var d = Math.floor(diff / (1000*60*60*24));
+    var h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    var s = Math.floor((diff % (1000*60)) / 1000);
+    document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Música — carga el reproductor de Spotify solo cuando el invitado lo pide
+  var toggle = document.getElementById('musicToggle');
+  var panel = document.getElementById('musicPanel');
+  var frame = document.getElementById('spotifyFrame');
+  var loaded = false;
+  toggle.addEventListener('click', function(){
+    panel.classList.toggle('open');
+    if(!loaded){
+      frame.src = "https://open.spotify.com/embed/track/0lUdYoSr8Hm3GL0HZld4ac?utm_source=generator&theme=0";
+      loaded = true;
+    }
+  });
+</script>
 
 </body>
 </html>
