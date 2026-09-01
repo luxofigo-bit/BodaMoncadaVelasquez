@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F1EDE5;
+    --paper:#E4EFFF;
     --paper-2:#E9E3D8;
     --smoke:#55697A;
     --smoke-deep:#2C3A45;
     --smoke-light:#AFC0CB;
-    --brass:#B3925F;
+    --brass:#3C78B1;
     --line: rgba(44,58,69,0.32);
     --line-soft: rgba(44,58,69,0.16);
   }
@@ -78,7 +78,7 @@
   .eyebrow-word{
     font-family:'Fraunces',serif;
     font-weight:500;
-    font-size:15px;
+    font-size:22px;
     letter-spacing:0.28em;
     color:var(--smoke);
     margin:0 0 18px;
@@ -96,7 +96,7 @@
     font-style:italic;
     font-weight:400;
     color:var(--brass);
-    font-size:0.62em;
+    font-size:0.8em;
     padding:0 0.12em;
   }
   .invite-line{
@@ -114,7 +114,7 @@
     font-family:'Fraunces',serif;
     font-style:italic;
     font-weight:600;
-    font-size:26px;
+    font-size:34px;
     letter-spacing:0.02em;
     color:var(--brass);
   }
@@ -143,7 +143,7 @@
   }
   .cd-label{
     font-family:'Space Mono',monospace;
-    font-size:9px;
+    font-size:12px;
     letter-spacing:0.1em;
     color:var(--brass);
     margin-top:8px;
@@ -175,13 +175,39 @@
     box-shadow:0 2px 10px rgba(44,58,69,0.18);
   }
   .music-toggle svg{width:18px;height:18px;color:var(--smoke-deep);}
+  .music-hint{
+    position:fixed;
+    top:26px;
+    right:66px;
+    z-index:50;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    color:var(--smoke-deep);
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:16px;
+    box-shadow:0 2px 8px rgba(44,58,69,0.15);
+    white-space:nowrap;
+    animation:hint-bounce 1.8s ease-in-out infinite;
+  }
+  .music-hint svg{width:13px;height:13px;flex-shrink:0;}
+  .music-hint.hidden{display:none;}
+  @keyframes hint-bounce{
+    0%,100%{transform:translateX(0);}
+    50%{transform:translateX(-5px);}
+  }
   .music-panel{
     position:fixed;
     top:68px;
     right:18px;
     z-index:50;
-    width:280px;
-    max-width:70vw;
+    width:300px;
+    max-width:78vw;
     background:var(--paper);
     border:1px solid var(--line);
     padding:10px;
@@ -263,7 +289,7 @@
   }
   .section-sub{
     font-family:'Space Mono',monospace;
-    font-size:10.5px;
+    font-size:14px;
     letter-spacing:0.14em;
     color:var(--brass);
     text-align:center;
@@ -307,10 +333,16 @@
   }
   .venue-label{
     font-family:'Space Mono',monospace;
-    font-size:10px;
+    font-size:13px;
     letter-spacing:0.14em;
     color:var(--brass);
     margin-bottom:10px;
+  }
+  .venue-icon{
+    width:36px;
+    height:36px;
+    display:block;
+    margin:0 auto 14px;
   }
   .venue-name{
     font-family:'Fraunces',serif;
@@ -445,7 +477,7 @@
   }
   .scripture-ref{
     font-family:'Space Mono',monospace;
-    font-size:11px;
+    font-size:14px;
     letter-spacing:0.12em;
     color:var(--brass);
     margin:18px 0 0;
@@ -472,7 +504,7 @@
   }
   .footer-tag{
     font-family:'Space Mono',monospace;
-    font-size:11px;
+    font-size:15px;
     letter-spacing:0.1em;
     color:var(--brass);
   }
@@ -504,8 +536,8 @@
     <path d="M50 6 L50 18 M50 84 L50 94 M6 50 L18 50 M82 50 L94 50" stroke="#55697A" stroke-width="1"/>
     <path d="M33 43 Q33 30 50 30 Q67 30 67 43 L67 47 Q50 52 33 47 Z" stroke="#55697A" stroke-width="1.3" stroke-linejoin="round"/>
     <line x1="36" y1="40" x2="64" y2="40" stroke="#55697A" stroke-width="0.9"/>
-    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#B3925F" stroke-width="2" stroke-linecap="round"/>
-    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#B3925F" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#3C78B1" stroke-width="2" stroke-linecap="round"/>
+    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#3C78B1" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 
   <p class="eyebrow-word">Nos casamos</p>
@@ -556,8 +588,8 @@
     <p class="scripture-ref">ECLESIASTÉS 4, 9-12</p>
   </div>
 
-  <p class="section-title">Con la bendición de DIOS</p>
-  <p class="section-sub">Y NUESTROS PADRES</p>
+  <p class="section-title">Con la bendición de</p>
+  <p class="section-sub">DIOS Y NUESTROS PADRES</p>
 
   <div class="legend">
     <div>
@@ -580,6 +612,16 @@
   <p class="section-sub">CEREMONIA Y RECEPCIÓN</p>
 
   <div class="venue">
+    <svg class="venue-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="20" y1="2.5" x2="20" y2="8.5" stroke="#55697A" stroke-width="1.3"/>
+      <line x1="17" y1="5" x2="23" y2="5" stroke="#55697A" stroke-width="1.3"/>
+      <path d="M11 18 L20 9 L29 18" stroke="#55697A" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+      <rect x="12" y="18" width="16" height="16.5" stroke="#55697A" stroke-width="1.3"/>
+      <path d="M17.2 34.5 L17.2 26 A2.8 2.8 0 0 1 22.8 26 L22.8 34.5" stroke="#55697A" stroke-width="1.2" fill="none"/>
+      <circle cx="20" cy="14.5" r="1.4" fill="#3C78B1"/>
+      <line x1="14.5" y1="23" x2="14.5" y2="27" stroke="#55697A" stroke-width="1"/>
+      <line x1="25.5" y1="23" x2="25.5" y2="27" stroke="#55697A" stroke-width="1"/>
+    </svg>
     <p class="venue-label">01 — CEREMONIA RELIGIOSA</p>
     <p class="venue-name" style="font-size:20px;line-height:1.3;">Capilla Sagrado Corazón de Jesús<br><span style="font-size:14px;font-family:'Space Mono',monospace;letter-spacing:0.04em;color:var(--smoke);">UNICAH</span></p>
     <p class="venue-loc">Tegucigalpa, Honduras</p>
@@ -592,10 +634,18 @@
   </div>
 
   <div class="venue">
+    <svg class="venue-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="14" cy="9" r="3" stroke="#55697A" stroke-width="1.2"/>
+      <path d="M9.5 33 L10.5 17.5 Q10.5 14 14 14 Q17.5 14 17.5 17.5 L18.5 33" stroke="#55697A" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+      <circle cx="27" cy="9" r="3" stroke="#55697A" stroke-width="1.2"/>
+      <path d="M22 33 L20.3 16 Q27 11.5 33.7 16 L32 33" stroke="#55697A" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+      <line x1="18.5" y1="24" x2="20.3" y2="24" stroke="#3C78B1" stroke-width="1.6"/>
+      <path d="M18 6.5 C18.6 5.6 20 5.9 20 7 C20 8 18.8 8.7 18 9.4 C17.2 8.7 16 8 16 7 C16 5.9 17.4 5.6 18 6.5Z" fill="#3C78B1"/>
+    </svg>
     <p class="venue-label">02 — RECEPCIÓN</p>
     <p class="venue-name">Villa Betel</p>
-    <p class="venue-loc">Carretera a Mateo, Tegucigalpa, Honduras</p>
-    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>Hora 6:30 P.M.</span></div>
+    <p class="venue-loc">Tegucigalpa, Honduras</p>
+    <div class="venue-time"><span>12 DE DICIEMBRE, 2026</span><span>6:30 P.M.</span></div>
     <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Villa+Betel+Tegucigalpa+Honduras" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
       VER UBICACIÓN
@@ -605,8 +655,8 @@
 
   <div class="dress">
     <p class="venue-label" style="margin-bottom:4px;">CÓDIGO DE VESTIMENTA</p>
-    <p class="section-title" style="font-size:22px;margin-bottom:10px;">Vestimenta Elegante</p>
-    <p class="venue-loc" style="margin-bottom:0;">Evita el color blanco</p>
+    <p class="section-title" style="font-size:22px;margin-bottom:8px;">Vestimenta elegante</p>
+    <p class="venue-loc" style="margin-bottom:0;">Evita el color blanco, por favor — es nuestro día.</p>
   </div>
 </section>
 
@@ -659,8 +709,8 @@
   <p class="section-sub">EL RECORRIDO DE LA NOCHE</p>
 
   <div class="itin-list">
-    <div class="itin-row"><div class="itin-time">3:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Boda Eclesiástica</div></div>
-    <div class="itin-row"><div class="itin-time">6:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Bienvenida y Baile</div></div>
+    <div class="itin-row"><div class="itin-time">3:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Boda eclesiástica</div></div>
+    <div class="itin-row"><div class="itin-time">6:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Bienvenida y baile</div></div>
     <div class="itin-row"><div class="itin-time">7:00 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Recepción</div></div>
     <div class="itin-row"><div class="itin-time">7:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Plato principal</div></div>
     <div class="itin-row"><div class="itin-time">8:30 PM</div><div class="itin-node"><span></span></div><div class="itin-event">Brindis y pastel</div></div>
@@ -677,23 +727,24 @@
     <path d="M50 6 L50 18 M50 84 L50 94 M6 50 L18 50 M82 50 L94 50" stroke="#55697A" stroke-width="1"/>
     <path d="M33 43 Q33 30 50 30 Q67 30 67 43 L67 47 Q50 52 33 47 Z" stroke="#55697A" stroke-width="1.3" stroke-linejoin="round"/>
     <line x1="36" y1="40" x2="64" y2="40" stroke="#55697A" stroke-width="0.9"/>
-    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#B3925F" stroke-width="2" stroke-linecap="round"/>
-    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#B3925F" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 20 L50 29 M45.5 24.5 L54.5 24.5" stroke="#3C78B1" stroke-width="2" stroke-linecap="round"/>
+    <path d="M14 66 L34 66 L40 55 L48 76 L54 66 L86 66" stroke="#3C78B1" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 
   <div class="venue" style="text-align:center;">
-    <p class="venue-label">CONFIRMACIÓN DE ASISTENCIA</p>
-    <p class="section-title" style="font-size:22px;margin-bottom:14px;">Confírmanos tu lugar</p>
-    <a class="map-btn" href="https://docs.google.com/spreadsheets/d/1s9JN9Rx0IHYwTjFKxysZYrwnLJKI7wHlkN_agirsZ-A/edit?usp=sharing" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="1.5"/></svg>
-      CONFIRMAR ASISTENCIA
+    <p class="venue-label">COMPARTE TUS FOTOS</p>
+    <p class="section-title" style="font-size:22px;margin-bottom:14px;">Ayúdanos a guardar el recuerdo</p>
+    <p class="venue-loc" style="margin-bottom:22px;">Envíanos las fotos que tomes de nuestra boda a esta carpeta compartida.</p>
+    <a class="map-btn" href="https://drive.google.com/drive/folders/1vwezUoEjqNn4q89XOmfBcugn2tY2-flD?usp=sharing" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l3-4h5l2 3h8v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z"/></svg>
+      SUBIR FOTOS
     </a>
   </div>
 
   <div class="gift-note">
     <svg class="gift-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M20 32 C10 25 5 19 5 13.5 A7.5 7.5 0 0 1 20 11 A7.5 7.5 0 0 1 35 13.5 C35 19 30 25 20 32Z" stroke="#55697A" stroke-width="1.3"/>
-      <path d="M11 18 L16 18 L18.5 13 L21.5 23 L24 18 L29 18" stroke="#B3925F" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11 18 L16 18 L18.5 13 L21.5 23 L24 18 L29 18" stroke="#3C78B1" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <p class="gift-text">Tu presencia es nuestro mejor regalo, pero si deseas hacernos un obsequio en efectivo será bienvenido.</p>
   </div>
@@ -703,12 +754,16 @@
   <p class="footer-note">PLANO ELABORADO CON CARIÑO PARA NUESTROS INVITADOS<br>DOC. CONFIDENCIAL DE FAMILIA — NO REDISTRIBUIR</p>
 </section>
 
+<div class="music-hint" id="musicHint">
+  CLICK AQUÍ
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</div>
 <div class="music-toggle" id="musicToggle" title="Música">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
 </div>
 <div class="music-panel" id="musicPanel">
   <p>HERMOSA EN BLANCO — SHANE FILAN</p>
-  <iframe id="spotifyFrame" src="" height="80" allow="encrypted-media" loading="lazy"></iframe>
+  <iframe id="ytFrame" src="" height="160" allow="autoplay; encrypted-media" loading="lazy" allowfullscreen></iframe>
 </div>
 
 <script>
@@ -730,15 +785,16 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // Música — carga el reproductor de Spotify solo cuando el invitado lo pide
+  // Música — carga el video/audio oficial de YouTube solo cuando el invitado lo pide
   var toggle = document.getElementById('musicToggle');
   var panel = document.getElementById('musicPanel');
-  var frame = document.getElementById('spotifyFrame');
+  var frame = document.getElementById('ytFrame');
   var loaded = false;
   toggle.addEventListener('click', function(){
     panel.classList.toggle('open');
+    document.getElementById('musicHint').classList.add('hidden');
     if(!loaded){
-      frame.src = "https://open.spotify.com/embed/track/0lUdYoSr8Hm3GL0HZld4ac?utm_source=generator&theme=0";
+      frame.src = "https://www.youtube.com/embed/06-XXOTP3Gc?autoplay=1";
       loaded = true;
     }
   });
