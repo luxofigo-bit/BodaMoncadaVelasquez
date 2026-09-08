@@ -506,7 +506,7 @@
     margin:40px 0 10px;
     text-align:center;
   }
-  .gift-icon{width:30px;height:30px;margin:0 auto 16px;}
+  .gift-icon{width:52px;height:52px;margin:0 auto 18px;}
   .gift-text{
     font-family:'Fraunces',serif;
     font-style:italic;
