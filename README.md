@@ -822,7 +822,7 @@
       <path d="M20 32 C10 25 5 19 5 13.5 A7.5 7.5 0 0 1 20 11 A7.5 7.5 0 0 1 35 13.5 C35 19 30 25 20 32Z" stroke="#55697A" stroke-width="1.3"/>
       <path d="M11 18 L16 18 L18.5 13 L21.5 23 L24 18 L29 18" stroke="#3C78B1" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <p class="gift-text">Queremos Bailar, Reír… ¡y contar muchos sobres!El REGALO más práctico.¡Muchas gracias!</p>
+    <p class="gift-text">Queremos Bailar, Reír… ¡y contar muchos sobres para Nuestra Luna de Miel!El REGALO más práctico.¡Muchas gracias!</p>
   </div>
 
   <p class="footer-line">Con amor, esperamos construir esta historia junto a ustedes.</p>
