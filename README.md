@@ -510,7 +510,7 @@
   .gift-text{
     font-family:'Fraunces',serif;
     font-style:italic;
-    font-size:16.5px;
+    font-size:19.5px;
     line-height:1.6;
     color:var(--smoke-deep);
     max-width:420px;
