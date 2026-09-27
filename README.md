@@ -823,7 +823,7 @@
       <path d="M11 18 L16 18 L18.5 13 L21.5 23 L24 18 L29 18" stroke="#3C78B1" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <p class="gift-text">El REGALO más práctico Cerca del Cofre.
-      Queremos Bailar, Reír… ¡y contar muchos ´´Sobres´´ !.¡Gracias!</p>
+      Queremos Bailar, Reír… ¡y contar muchos ´´Sobres´´ !</p>
   </div>
 
   <p class="footer-line">Con amor, esperamos construir esta historia junto a ustedes.</p>
@@ -833,7 +833,7 @@
 
 <div class="music-hint" id="musicHint">
   CLICK AQUÍ
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  <svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
 </div>
 <div class="music-toggle" id="musicToggle" title="Música">
   <svg viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
