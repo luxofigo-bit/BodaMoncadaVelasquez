@@ -658,7 +658,7 @@
     </div>
     <div>
       <p class="legend-key">PADRES DE LA NOVIA</p>
-      <p class="legend-names">JULIO VELAZQUES<br>Y<br>CLEMENTINA COREA</p>
+      <p class="legend-names">JULIO VELASQUEZ<br>Y<br>CLEMENTINA COREA</p>
     </div>
   </div>
 </section>
