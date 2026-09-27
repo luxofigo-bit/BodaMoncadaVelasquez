@@ -836,7 +836,7 @@
   <svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
 </div>
 <div class="music-toggle" id="musicToggle" title="Música">
-  <svg viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
 </div>
 <div class="music-panel" id="musicPanel">
   <p>HERMOSA EN BLANCO — SHANE FILAN</p>
