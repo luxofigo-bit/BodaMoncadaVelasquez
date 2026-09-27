@@ -184,7 +184,7 @@
     align-items:center;
     gap:6px;
     font-family:'Space Mono',monospace;
-    font-size:11px;
+    font-size:20px;
     letter-spacing:0.06em;
     color:var(--smoke-deep);
     background:var(--paper);
